@@ -1,0 +1,22 @@
+{
+  "name": "fitbitapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "browserify": "^14.3.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "fitbit-node": "^2.0.5",
+    "passport": "^0.3.2",
+    "passport-fitbit-oauth2": "^1.0.2",
+    "webpack": "^2.5.0"
+  }
+}

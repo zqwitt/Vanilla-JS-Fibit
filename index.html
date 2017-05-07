@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		<button onclick="login();">Login To Fitbit</button>
+		
+		<br/>
+		<input id="gdas_date" type="date">
+		<button onclick="getDailyActivitiesSummary(document.querySelector('#gdas_date').value);">Get Daily Activities Summary</button>
+
+		<br/>
+		<select id="gats_activities">
+			<option value=""></option>
+			<option value="calories">Calories</option>
+			<option value="caloriesBMR">Calories BMR</option>
+			<option value="steps">Steps</option>
+			<option value="distance">Distance</option>
+			<option value="floors">Floors</option>
+			<option value="elevation">Elevation</option>
+			<option value="minutesSedentary">Minutes Sedentary</option>
+			<option value="minutesLightlyActive">Minutes Lightly Active</option>
+			<option value="minutesFairlyActive">Minutes Fairly Active</option>
+			<option value="minutesVeryActive">Minutes Very Active</option>
+			<option value="activityCalories">Activity Calories</option>
+		</select>
+		<input id="gats_beingDate" type="date">
+		<input id="gats_endDate" type="date">
+		<button onclick="getActivityTimeSeries({'resourcePath':document.querySelector('#gats_activities').options[document.querySelector('#gats_activities').selectedIndex].value,'beginDate':document.querySelector('#gats_beingDate').value,'endDate':document.querySelector('#gats_endDate').value});">Get Activities Time Series</button>
+
+		<br/>
+		<button onclick="getActivityIntradayTimeSeries();">Get Daily Activities Summary</button>
+
+		<br/>
+		<input id="gdsl_date" type="date">
+		<button onclick="getDailySleepLog();">Get Daily Sleep Log</button>
+
+		<pre>
+			<code id="results">
+			</code>
+		</pre>
+		<script src="config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="resources/Activities.js" type="text/javascript" charset="utf-8"></script>
+		<script src="resources/Sleep.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
